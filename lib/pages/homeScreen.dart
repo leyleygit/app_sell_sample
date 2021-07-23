@@ -15,10 +15,9 @@ class MyHomeScreen extends StatefulWidget {
 }
 
 var _product = product;
-
+var _cart = cart;
 
 class _MyHomeScreenState extends State<MyHomeScreen> {
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,10 +44,9 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                 SizedBox(
                   width: 20,
                 ),
-               LineIcon(
+                LineIcon(
                   LineIcons.filter,
                   color: MyTheme.iconBlack,
-                  
                 ),
                 SizedBox(
                   width: 10,
@@ -128,22 +126,38 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                         ),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            height: 40,
-                            decoration: BoxDecoration(
-                                boxShadow: [
-                                  BoxShadow(
-                                      spreadRadius: 4.0,
-                                      blurRadius: 10.0,
-                                      offset: Offset(1.0, 7.0),
-                                      color: Color(0xffb3b3b3))
-                                ],
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(15)),
-                            child: Center(
-                              child: Text(
-                                'Add',
-                                style: GoogleFonts.passionOne(fontSize: 20),
+                          child: InkWell(
+                            onTap: () {
+                              setState(() {
+                                //_cart = []
+                                var results = _cart.indexWhere((e) =>
+                                   e['_proID']== _product[index]['_proID']);
+                                    
+                                    if(results>=0){
+                                      _product[index]['qty']+=1;
+                                    }else{
+                                      _cart.add(_product[index]);
+                                    }
+                              });
+                              print(cart);
+                            },
+                            child: Container(
+                              height: 40,
+                              decoration: BoxDecoration(
+                                  boxShadow: [
+                                    BoxShadow(
+                                        spreadRadius: 4.0,
+                                        blurRadius: 10.0,
+                                        offset: Offset(1.0, 7.0),
+                                        color: Color(0xffb3b3b3))
+                                  ],
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(15)),
+                              child: Center(
+                                child: Text(
+                                  'Add',
+                                  style: GoogleFonts.passionOne(fontSize: 20),
+                                ),
                               ),
                             ),
                           ),

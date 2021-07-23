@@ -25,14 +25,14 @@ var bottomItem = [
     label: '',
     icon: LineIcon(
       LineIcons.heartAlt,
-      color: Colors.red,
+      color: Colors.black,
     ),
   ),
   BottomNavigationBarItem(
     label: '',
     icon: LineIcon(
       LineIcons.shoppingBag,
-      color: Colors.pink,
+      color: Colors.black,
     ),
   ),
 ];

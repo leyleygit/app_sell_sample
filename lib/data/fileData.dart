@@ -20,7 +20,9 @@ List<Map> product = [
     'proName': 'chhunly',
     'price': 20000,
     'cost': 18000,
-    'img': ['assets/img/5.jpg', 'assets/img/6.jpg', 'assets/img/7.png']
+    'img': ['assets/img/5.jpg', 'assets/img/6.jpg', 'assets/img/7.png'],
+    'qty':1
+
   },
   {
     '_proID': 'pro002',
@@ -29,7 +31,21 @@ List<Map> product = [
     'price': 5000,
     'cost': 2000,
     'img':['assets/img/1.jpg','assets/img/2.jpg',],
+    'qty':1
   }
 ];
 List<Map> order = [];
+List<Map> cart = [
+  // {
+  //   '_proID': 'pro001',
+  //   '_catID': 'cat001',
+  //   'proName': 'chhunly',
+  //   'price': 20000,
+  //   'cost': 18000,
+  //   'img': ['assets/img/5.jpg', 'assets/img/6.jpg', 'assets/img/7.png'],
+  //   'qty':1
+
+  // },
+];
+
 
