@@ -1,13 +1,9 @@
 import 'package:app_sell/data/fileData.dart';
 import 'package:app_sell/package/theme.dart';
-import 'package:app_sell/pages/homeScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:line_icons/line_icon.dart';
-import 'package:line_icons/line_icons.dart';
-
 class AddToCard extends StatefulWidget {
   const AddToCard({Key? key}) : super(key: key);
 
